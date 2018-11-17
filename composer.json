@@ -58,6 +58,7 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
+            "@composer drupal:scaffold",
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
             "echo 'Running composer install in tests folder...'",
             "@composer install --working-dir=tests --ansi"
